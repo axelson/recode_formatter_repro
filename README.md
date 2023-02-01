@@ -1,21 +1,10 @@
-# Fmt
+Reproduction for recode issue
 
-**TODO: Add description**
+Steps to reproduce:
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `fmt` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:fmt, "~> 0.1.0"}
-  ]
-end
+```
+mix deps.get
+mix recode
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/fmt>.
-
+After this `git diff` is no longer clean because the trailing commas added by https://github.com/marcandre/freedom_formatter have been dropped.
