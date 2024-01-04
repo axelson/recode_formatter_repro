@@ -4,7 +4,7 @@ Steps to reproduce:
 
 ```
 mix deps.get
-mix recode
+mix recode --dry
 ```
 
-After this `git diff` is no longer clean because the trailing commas added by https://github.com/marcandre/freedom_formatter have been dropped.
+Run `mix recode --dry` a few times and you should see the `FunctionClauseError`
